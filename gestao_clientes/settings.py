@@ -75,20 +75,21 @@ WSGI_APPLICATION = 'gestao_clientes.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'HC715Vcyz74PiV7EAL28',
+        'HOST': 'containers-us-west-180.railway.app',
+        'PORT': '5828',
+    }
+}
 
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#        'NAME': 'gestao_clientes',
-#        'USER': 'postgres',
-#        'PASSWORD': 'root',
-#        'HOST': '127.0.0.1',
-#        'PORT': '5432',
-#    }
-#}
+#postgresql://postgres:HC715Vcyz74PiV7EAL28@containers-us-west-180.railway.app:5828/railway
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
